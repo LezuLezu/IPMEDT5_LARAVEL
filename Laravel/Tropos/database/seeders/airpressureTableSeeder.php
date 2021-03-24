@@ -1,20 +1,20 @@
 <?php
 
 namespace Database\Seeders;
-
+use DB;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class airpressureTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call([
-            airpressureTableSeeder::class
+        DB::table('airpressure')->insert([
+            'measurement' => 0,
         ]);
     }
 }
