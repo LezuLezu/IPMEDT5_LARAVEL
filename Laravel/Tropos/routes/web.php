@@ -15,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/airpressure', 'App\Http\Controllers\AirpressureController@show');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'App\Http\Controllers\TemperatuurController@showTemp');
