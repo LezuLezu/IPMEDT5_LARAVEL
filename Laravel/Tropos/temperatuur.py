@@ -16,8 +16,11 @@ port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=3.0)
 mycursor = mydb.cursor()
 
 while True:
-    temp = port.read(5)
-    print(temp)
+    time.sleep(1)
+    rcv = port.readline().strip()
+    mycursor.execute("UPDATE temperature SET temperatuur = " + rcv + ";")
+    print(rcv)
+
     time.sleep(1)
     mydb.commit()
 

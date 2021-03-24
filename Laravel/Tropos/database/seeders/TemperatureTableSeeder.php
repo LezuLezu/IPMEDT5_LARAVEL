@@ -15,7 +15,7 @@ class TemperatureTableSeeder extends Seeder
     public function run()
     {
       DB::table('temperature')->insert([
-        'temperatuur' => 20.00
+        'temperatuur' => 20.00,
       ]);
     }
 }
