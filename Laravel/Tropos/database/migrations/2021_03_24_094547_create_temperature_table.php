@@ -15,7 +15,6 @@ class CreateTemperatureTable extends Migration
     {
         Schema::create('temperature', function (Blueprint $table) {
             $table->float("temperatuur", 10, 5);
-            $table->string('start');
         });
     }
 
