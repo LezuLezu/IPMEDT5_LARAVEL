@@ -14,8 +14,10 @@ class CreateDustTable extends Migration
     public function up()
     {
         Schema::create('dust', function (Blueprint $table) {
-            $table->timestamps();
+            $table->date('date');
+            $table->time('time');
             $table->string('measurement');
+            $table->string('unit');
         });
     }
 
