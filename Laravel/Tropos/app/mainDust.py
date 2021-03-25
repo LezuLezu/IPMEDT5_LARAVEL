@@ -31,22 +31,23 @@ while True:
         unit = rcv[1].strip()
         # print(amount)
         # print(unit)
+        if(amount != "0.2"): #Eliminate false readings
 
-        # Time & date 
-        now = datetime.now(timeZone)
-        dateTime = now.strftime("%Y-%m-%d %H:%M:%S")
-        # print(dateTime)
-        dateTime = dateTime.split(" ")
-        date = dateTime[0].strip()
-        time = dateTime[1].strip()
-        # print(date)
-        # print(time)
+            # Time & date 
+            now = datetime.now(timeZone)
+            dateTime = now.strftime("%Y-%m-%d %H:%M:%S")
+            # print(dateTime)
+            dateTime = dateTime.split(" ")
+            date = dateTime[0].strip()
+            time = dateTime[1].strip()
+            # print(date)
+            # print(time)
 
-        # sql code to insert date to table dust in TroposDB
-        sql = "INSERT INTO dust (date, time, measurement, unit) VALUES (%s, %s, %s, %s)"
-        val = (date, time, amount, unit)
-        myCursor.execute(sql, val)
-        myDB.commit()
+            # sql code to insert date to table dust in TroposDB
+            sql = "INSERT INTO dust (date, time, measurement, unit) VALUES (%s, %s, %s, %s)"
+            val = (date, time, amount, unit)
+            myCursor.execute(sql, val)
+            myDB.commit()
 
 myDB.close()
 
