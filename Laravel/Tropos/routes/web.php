@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', '\App\Http\Controllers\DustController@show');
+Route::get('/avg', '\App\Http\Controllers\DustController@average');
 // Route::get('/', function () {
 //     return view('welcome');
 // });
