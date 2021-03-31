@@ -12,6 +12,10 @@
                 advice({{$average}}); 
             </script>
 
+           <script type="text/javascript">
+                checkAverage({{$average}});
+           </script>
+
         </section>
     </article>
 @endsection
