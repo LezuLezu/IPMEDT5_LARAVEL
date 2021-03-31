@@ -53,18 +53,36 @@ while True:
             val = (date, time, amount, unit)
             myCursor.execute(sql, val)
             myDB.commit()
+    
+
+    # Read from file
+    filePath = "public/\App\LedControl.txt"
+    infoFile = open(filePath, "rt")
+    info = infoFile.readline()  
+    # print(info)   
+    info = info.split(',') 
+    url = info[0]
+    # print(url)
+    
+    
+    if(url == '/avg'):
+        infoAmount = info[1]
+    if(url == '/'):
+        infoAmount = info[1]
+    print(infoAmount)
 
         # Led indication towards Arduino
-        if(float(amount) <= low_dust):
-            port.write(str.encode("g"))
-            # print("low")
-        if(float(amount) > low_dust and float(amount) < high_dust):
-            port.write(str.encode("y"))
-            # print("moderate")
-        if(float(amount) >= high_dust):
-            port.write(str.encode("r"))
-            # print('high')
-
+    if(float(infoAmount) <= low_dust):
+        port.write(str.encode("g"))
+        # print("low")
+    if(float(infoAmount) > low_dust and float(infoAmount) < high_dust):
+        port.write(str.encode("y"))
+        # print("moderate")
+    if(float(infoAmount) >= high_dust):
+        port.write(str.encode("r"))
+        # print('high')
+        
+infoFile.close()
 myDB.close()
 
     
