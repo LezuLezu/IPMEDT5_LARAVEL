@@ -5,9 +5,13 @@
 @section('content')
     <article class="dustCard">
         <section class="dustCard__text">
-            <pre>
-                Gemiddelde afgelopen uur:   {{$average}}
-            </pre>
+            Huidig uur:     {{$hour}}   <br>
+            Gemiddelde stof niveau dit uur: {{$average}}
+            <p id="dust__advise"></p>
+            <script type="text/javascript">
+                advice({{$average}}); 
+            </script>
+
         </section>
     </article>
 @endsection

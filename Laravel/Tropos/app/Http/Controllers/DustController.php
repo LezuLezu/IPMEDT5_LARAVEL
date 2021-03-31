@@ -25,8 +25,10 @@ class DustController extends Controller
         GROUP BY hours
         ORDER BY hours DESC        
         ");
-        // return $average = (string)$db[1];
-        return $db;
-        // return view('dust.average', ['average' => $average]);
+        // return $db;
+        $average = $db[0]->average;
+        $hour = $db[0]->hours;
+        // return $db[0]->average . ' ' .  $db[0]->hours ;
+        return view('dust.average', ['average' => $average, 'hour'=>$hour]);
     }
 }
