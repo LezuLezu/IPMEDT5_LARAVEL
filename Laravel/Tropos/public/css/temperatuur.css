@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.8rem;
+    padding: 2rem;
+    background-color: #eef2f6;
+    font-family: sans-serif;
+}
+
+.temperatuurArticle{
+    background-color: #f4f4f4;
+    width:50vw;
+    height: 80vh;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 2rem black;
+    position: relative;
+}
+
+.temperatuurArticle_h1{
+    padding: 3rem;
+    padding-left: 4rem;
+    color: black;
+}
+
+.temperatuurArticle_h2{
+    padding: 3rem;
+    padding-left: 4rem;
+    color: black;
+}
+
+.temperatuurArticle_p{
+    padding: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    color: black;
+}
+
+.temperatuurArticle_button{
+    font-size: 100%;
+    width: 20rem;
+    height: 5rem;
+    box-sizing: border-box;
+    background-color: #1a508b;
+    border: none;
+    color: #eeeeee;
+    transition: 0.2s all;
+    margin-left: 12rem;
+    margin-top: 3rem;
+}
+
+.temperatuurArticle_button_info{
+    margin-left: 20rem;
+}
+
+.temperatuurArticle_button:hover{
+    cursor: pointer;
+    
+}
+
+
+.temperatuurArticle_info{
+    background-color: #fff3e6;
+    width:45vw;
+    height: 60vh;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 2rem black;
+    position: relative;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    float: left;
+    margin-left: 2rem;
+}
+
+.temperatuurArticle_koud{
+    background-color: #3c59b6;
+}
+
+.temperatuurArticle_warm{
+    background-color: #ffc95f;
+}
+    
