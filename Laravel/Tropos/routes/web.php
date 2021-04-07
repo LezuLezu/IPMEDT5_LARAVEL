@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BuzzerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/airpressure', 'App\Http\Controllers\AirpressureController@show');
 
 Route::get('/', 'App\Http\Controllers\TemperatuurController@showTemp');
+
+Route::get('/monoxide', 'App\Http\Controllers\MonoxideController@show');
+Route::get('/buzzer', [BuzzerController::class, 'aanuit']);
