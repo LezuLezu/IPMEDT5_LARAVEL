@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\TemperatuurController@showTemp');
+Route::get('/tempInfo', 'App\Http\Controllers\TemperatuurController@showTempInfo');
