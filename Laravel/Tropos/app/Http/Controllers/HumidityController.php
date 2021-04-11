@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 class HumidityController extends Controller
 {
     public function showHum(){
-        $hum = \App\Models\Luchtvochtigheid::first()->humidity;
-        return view('humidity', ['hum' => $hum]);
+        return view('humidity', [
+          'hum' => \App\Models\Humidity::first(),
+          'avghum' => \App\Models\Humidity::avg('luchtvochtigheid'),
+
+        ]);
       }
 }

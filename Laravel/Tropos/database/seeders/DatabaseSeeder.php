@@ -14,9 +14,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            airpressureTableSeeder::class,
-            LedTableSeeder::class,
-            TemperatureTableSeeder::class,
             humidityTableSeeder::class
         ]);
     }
