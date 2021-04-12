@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.8rem;
+    padding: 2rem;
+    font-family: sans-serif;
+    background-color: #eef2f6;
+}
+
+
+/* MONOXIDE MEASSURE PAGE */
+.monoxideSection{
+    width:50vw;
+    height: 80vh;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 2rem black;
+    position: relative;
+}
+
+.monoxideSection__header{
+    padding: 3rem;
+    font-size: 2.8rem;
+}
+
+.monoxideSection__result{
+    margin: 3rem;
+    font-size: 2.6rem;
+}
+
+.monoxideSection__result__advice{
+    margin: 3rem;
+    font-size: 1.8rem;
+}
+
+.monoxideSection__button{
+    font-size: 1.8rem;
+    width: 30rem;
+    height: 5rem;
+    background-color: #1a508b;
+    border: none;
+    color: #eeeeee;
+    margin-left: 3rem;
+    /* margin-top: 3rem; */
+    cursor: pointer;
+}
+
+.monoxideSection__button--buzzer{
+    width: 20rem;
+    margin-left: 8rem;
+}
+
+
+/* MONOXIDE INFORMATION PAGE */
+.monoxideInfoTitle{
+    text-align: center;
+    margin: 1rem 0rem 4rem 0rem;
+    font-weight: 500;
+}
+
+.monoxideSection__button--measureCO{
+    margin-left: 40%;
+    margin-bottom: 4rem;
+}
+
+.monoxideMain{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.monoxideSection--monoxideInfo{
+    width:45vw;
+    height: 60vh;
+    background-color: #fff3e6;
+}
+
+.monoxideMain__h2{
+    font-weight: 400;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.monoxideMain__explanation{
+    margin: 2rem;
+    line-height: 1.5;
+}
+
+.monoxideMain__explanation--ul{
+    margin: 2rem 4rem;
+}
+
+
+
