@@ -17,11 +17,11 @@ while True:
     mycursor.execute("SELECT * FROM buzzers;")
     for x in mycursor:
         print(x[3])
-    if x[1] == 'aan':
+    if x[3] == 'aan':
         print(x[3])
-        port.write("b1")    #buzzer on later (m = motor)
-    else:
-        port.write("b0")    #buzzer off
+        port.write("b0")    #buzzer off later (m = motor)
+    # else:
+    #     port.write("b0")    #buzzer off
 
 
     rcv = port.readline().strip()

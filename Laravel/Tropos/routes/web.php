@@ -20,4 +20,5 @@ Route::get('/temperatuur', 'App\Http\Controllers\TemperatuurController@showTemp'
 Route::get('/tempInfo', 'App\Http\Controllers\TemperatuurController@showTempInfo');
 
 Route::get('/monoxide', 'App\Http\Controllers\MonoxideController@show');
+Route::get('/monoxideInformation', 'App\Http\Controllers\MonoxideController@showMonoxideInformation');
 Route::get('/buzzer', [BuzzerController::class, 'aanuit']);

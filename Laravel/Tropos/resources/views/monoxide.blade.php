@@ -1,35 +1,68 @@
 @extends("baseview")
 
 @section('title')
-Monoxide
+Koolmonoxide
 @endsection
 
 @section('body')
-<section>
-    <h1>monoxide: {{$carbon_monoxide}} ppm</h1>
-    <a href='{{"/buzzer"}}'> Buzzer aan/uit</a>
+<section class="monoxideSection" id="js--monoxideSection">
+    <h1 class="monoxideSection__header">Koolmonoxide: {{$carbon_monoxide}} ppm</h1>
+    <h2 class="monoxideSection__result" id="js--result">Gehalte advies</h2>
+    <p class="monoxideSection__result__advice" id="js--result__explained">Uitleg van het resultaat</p>
+    <p class="monoxideSection__result__advice" id="js--result__solution">Oplossing van het resultaat</p>
+
+    <button class="monoxideSection__button" onclick=informationMonoxide()>Informatie over koolmonoxide gehaltes</button>
+    <button class="monoxideSection__button monoxideSection__button--buzzer" id="js--button__buzer" onclick=stopBuzzer()>Alarm uit</button>
+  <!-- <a href='{{"/buzzer"}}'> Buzzer uit</a>   vergeet pop up waarschuwing niet want vertraging-->
 </section>
 
-<section class="information">
-    <h2 class="information__h2">Wat is koolmonoxide?</h2>
-    <p>Koolstofmonoxide (CO) is een gas die ontstaat bij een onvolledige verbranding.
-       Het is een levensgevaarlijke gas. Wat het zo gevaarlijk maakt is dat het niet te ruiken, proeven of zien is.
-       Het wordt daarom ook wel de stille sluipmoordenaar genoemd.</p>
-</section>
 
-<section class="information">
-    <h2 class="information__h2">Oorzaken koolmonoxidevergiftiging</h2>
-    <ul>
-        <li>Een verkeerd geïnstalleerd of kapot gastoestel: kachel, geiser, cv of combiketel.</li>
-        <li>Verkeerde installatie van kachels en open haarden en een slechte afvoer als gevolg van 
-            lekken in afvoerbuizen of aansluitingen en gebrekkig onderhoud van de afvoerkanalen.</li>
-        <li>Verkeerde stookgewoonten, bijvoorbeeld door kachels en open haarden te gebruiken als allesbranders.</li>
-        <li>Het verbranden van gas, olie of hout in een afgesloten ruimte.</li>
-    </ul>
-</section>
+<script>
+    function stopBuzzer() {
+        location.href='{{"/buzzer"}}'; 
+    }
 
-<section class="information">
-    <h2 class="information__h2">Koolmonoxide voorkomen</h2>
-    <p>tekst</p>
-</section>
+    function informationMonoxide(){
+        location.href="/monoxideInformation";
+    }
+  
+    //   RESULT BY MONOXIDE VALUE
+    let result = document.getElementById("js--result");
+    let result__explained = document.getElementById("js--result__explained");
+    let result__solution = document.getElementById("js--result__solution");
+    let buttonBuzzer = document.getElementById("js--button__buzer");
+    let section = document.getElementById("js--monoxideSection");
+
+    if( {{$carbon_monoxide}} < 200){
+        result.innerHTML = "Het koolmonoxide gehalte is goed.";  //niks doen
+        result__explained.innerHTML = "Het gehalte is niet schadelijk voor je gezondheid. Je hoeft niks te veranderen aan de ruimte.";
+        section.style.backgroundColor ="#abe8af";
+        buttonBuzzer.style.display = "none";
+    }
+
+    if( {{$carbon_monoxide}} >= 200 && {{$carbon_monoxide}} <= 400){
+        result.innerHTML = "Het koolmonoxide gehalte is matig. ";     //raam en deuren open 
+        result__explained.innerHTML = "Het gehalte is hoger dan wat het hoort te zijn.";
+        result__solution.innerHTML = "Om het gehalte te laten dalen kan je ramen en deuren open doen.";
+        section.style.backgroundColor ="#fdee93";
+        //   buttonBuzzer.style.display = "none";
+    }
+
+    if( {{$carbon_monoxide}} > 400 && {{$carbon_monoxide}} < 800){
+        result.innerHTML = "Het koolmonoxide gehalte is schadelijk voor je gezondheid.";
+        result__explained.innerHTML = "Het gehalte is aan de hoge kant.";
+        result__solution.innerHTML = "Houdt alle ramen en deuren open. Houdt ook het gehalte in de gaten, zodat je kan zien of het gaat dalen. Ales het gaat stijgen verlaat de ruimte.";
+        section.style.backgroundColor ="#ffa046";
+    }
+
+    if( {{$carbon_monoxide}} >= 800){
+        result.innerHTML = "Verlaat de ruimte! Het koolmonoxide gehalte is te hoog";
+        result__explained.innerHTML = "Het gehalte is te hoog. Verlaat zo snel mogelijk de ruimte. Het kan ernstige gevolgen hebben als je blijft.";   
+        result__solution.innerHTML = "Het is te hoog om er nu zelf nog iets tegen te doen.";
+        section.style.backgroundColor ="#fc6465";
+    }
+  
+</script>
+
+@endsection
 
