@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/temperatuur.css">
-    <title>Temperatuur</title>
-</head>
-<body>
+@extends("baseview")
+
+@section('title')
+Temperatuur informatie
+@endsection
+
+@section('body')
+<header>
+    <nav class="nav">
+        <a class="nav__link nav__link__notHover nav__link--img" href="/home"><figure><img class="nav__link__img" src="/img/troposLogo.png" alt="logo van Tropos"></figure></a>
+        <a class="nav__link" href="/home">Home</a>
+        <a class="nav__link nav__link__current" href="/temperatuur">Temperatuur</a>
+        <a class="nav__link" href="#">Luchtvochtigheid</a>
+        <a class="nav__link" href="/airpressure">Luchtdruk</a>
+        <a class="nav__link" href="#">Stof</a>
+        <a class="nav__link" href="/monoxide">Koolmonoxide</a>
+    </nav>  
+</header>
 <main>
 <h1 class="temperatuurArticle_h1">Hier staan alle adviezen voor de temperatuur in huis.</h1>
 <article class="temperatuurArticle_info">
@@ -31,5 +39,4 @@
     </p>
 </article>
 </main>
-</body>
-</html>
+@endsection
