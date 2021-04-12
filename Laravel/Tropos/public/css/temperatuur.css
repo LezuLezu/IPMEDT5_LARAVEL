@@ -11,7 +11,6 @@ html{
 
 body{
     font-size: 1.8rem;
-    padding: 2rem;
     background-color: #eef2f6;
     font-family: sans-serif;
 }
@@ -49,7 +48,7 @@ body{
     width: 20rem;
     height: 5rem;
     box-sizing: border-box;
-    background-color: #1a508b;
+    background-color: #3C59B6;
     border: none;
     color: #eeeeee;
     transition: 0.2s all;
