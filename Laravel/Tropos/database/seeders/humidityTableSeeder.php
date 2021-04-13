@@ -16,7 +16,7 @@ class humidityTableSeeder extends Seeder
     {
         for($x = 0; $x < 72; $x++) {
             DB::table('humidity')->insert([
-                'luchtvochtigheid' => 50,
+                'luchtvochtigheid' => rand ( 40, 60 ),
             ]);
         }
     }

@@ -8,8 +8,9 @@ class HumidityController extends Controller
 {
     public function showHum(){
         return view('humidity', [
-          'hum' => \App\Models\Humidity::first(),
+          'hum' => \App\Models\Humidity::latest()->first(),
           'avghum' => \App\Models\Humidity::avg('luchtvochtigheid'),
+          'sum' => \App\Models\Humidity::all(),
 
         ]);
       }

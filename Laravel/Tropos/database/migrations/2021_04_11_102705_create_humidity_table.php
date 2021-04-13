@@ -16,6 +16,7 @@ class CreateHumidityTable extends Migration
         Schema::create('humidity', function (Blueprint $table) {
             $table->id();
             $table->integer('luchtvochtigheid');
+            $table->timestamps();
         });
     }
 

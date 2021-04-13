@@ -14,7 +14,7 @@ def verstuurDb(data):
     print(data)
     mycursor = mydb.cursor()
     mycursor.execute("DELETE FROM humidity LIMIT 1;")
-    mycursor.execute("INSTERT INTO humidity (luchtvochtigheid) VALUES (%s)", (int(data),))
+    mycursor.execute("INSERT INTO humidity (luchtvochtigheid) VALUES (%s)", (int(data),))
     mydb.commit()
 
 

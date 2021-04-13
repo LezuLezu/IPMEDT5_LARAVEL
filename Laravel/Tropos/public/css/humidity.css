@@ -1,16 +1,23 @@
 :root{
-    --background-color: #FCF8EE;
-    --primary-color:  #16825D;
-    --secondary-color: #d8d3c6;
+    --primary-color: #eef2f6;
+    --secondary-color:  #3C59B6;
+
 }
 
 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.container__section{
     font-size: 1.4rem;
     width: 60%;
     height: 100%;
 }
 
-.container__list{
+.container__section__list{
     width: 100%;
     height: 100%;
     display: grid;
@@ -19,26 +26,13 @@
     list-style-type: none;
 }
 
-.container__list__top{
-    width: 100%;
-    height: 100%;
-    grid-column: 1 / span 21;
-    grid-row: 2 / span 1;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 2rem;
-}
-
-.container__list__hum{
+.container__section__list__hum{
     width: 100%;
     height: 100%;
     grid-column: span 10;
-    grid-row: 4 / span 2;
+    grid-row: 2 / span 2;
     background-color:  var(--secondary-color);
+    color: white;
     border-radius: 2rem;
     display: flex;
     justify-content: center;
@@ -47,16 +41,57 @@
 
 }
 
-.container__list__avg{
+.container__section__list__avg{
     width: 100%;
     height: 100%;
     grid-column: 12 / span 10;
-    grid-row: 4 / span 2;
+    grid-row: 2 / span 2;
     background-color:  var(--secondary-color);
+    color: white;
     border-radius: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+}
+
+.container__section__list__graph{
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / span 21;
+    grid-row: 5 / span 7;
+    background-color:  var(--primary-color);
+    border: solid;
+    border-width: 1rem;
+    border-radius: 2rem;
+    border-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.container__section__list__graph__chart{
+    width: 98%;
+    height: 98%;
+
+}
+
+@media (max-width: 950px){
+
+    .container__section{
+        font-size: 1.2rem;
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px){
+
+    .container__section{
+        font-size: 0.8rem;
+        width: 90%;
+    }
 
 }
