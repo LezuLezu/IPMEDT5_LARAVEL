@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
 
-            humidityTableSeeder::class
+            humidityTableSeeder::class,
             airpressureTableSeeder::class,
             LedTableSeeder::class,
             TemperatureTableSeeder::class,
