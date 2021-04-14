@@ -18,7 +18,10 @@ class DatabaseSeeder extends Seeder
             LedTableSeeder::class,
             TemperatureTableSeeder::class,
             CarbonMonoxideTableSeeder::class,
-            BuzzerTableSeeder::class
+            BuzzerTableSeeder::class,
+            DustTableSeeder::class,
+            CleaningWaysTableSeeder::class,
+            CleaningProductsTableSeeder::class,
         ]);
     }
 }

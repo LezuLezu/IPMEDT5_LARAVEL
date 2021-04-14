@@ -24,6 +24,12 @@ Route::get('/monoxideInformation', 'App\Http\Controllers\MonoxideController@show
 Route::get('/buzzer', [BuzzerController::class, 'aanuit']);
 
 Route::get('/home', 'App\Http\Controllers\HomepageController@show');
-Route::get('/dust', '\App\Http\Controllers\DustController@show');
-Route::get('/dustavg', '\App\Http\Controllers\DustController@average');
 
+// Stof routes
+
+Route::get('/dust', '\App\Http\Controllers\DustController@index');
+Route::get('/dust/show', '\App\Http\Controllers\DustController@show');
+Route::get('/dust/avg', '\App\Http\Controllers\DustController@average');
+Route::get('/dust/create', '\App\Http\Controllers\CleaningController@create');
+Route::post('/dust', '\App\Http\Controllers\CleaningController@store');
+Route::get('/dust/clean', '\App\Http\Controllers\CleaningController@show');
