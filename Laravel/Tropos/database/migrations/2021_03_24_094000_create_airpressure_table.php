@@ -14,7 +14,11 @@ class CreateAirpressureTable extends Migration
     public function up()
     {
         Schema::create('airpressure', function (Blueprint $table) {
+            $table->id();
             $table->double('measurement', 8, 4)->default(0);
+            $table->integer('gewenste_luchtdruk')->default(1025);
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

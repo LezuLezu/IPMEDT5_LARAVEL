@@ -4,7 +4,7 @@ namespace Database\Seeders;
 use DB;
 use Illuminate\Database\Seeder;
 
-class airpressureTableSeeder extends Seeder
+class windowAirpressureTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,9 +13,8 @@ class airpressureTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('airpressure')->insert([
-            'measurement' => 0,
-            'gewenste_luchtdruk' => 1024,
+        DB::table('window_airpressure')->insert([
+            'window_open' => 'closed',
         ]);
     }
 }
