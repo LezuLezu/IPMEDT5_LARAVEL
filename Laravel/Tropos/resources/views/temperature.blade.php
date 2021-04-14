@@ -18,17 +18,18 @@ Temperatuur
 </header>
 <main class="main">
 <article class="temperatuurArticle" id="js--temperatuurArticle">
-  <h1 class="temperatuurArticle_h1">Temperatuur: {{$temp}} °C</h1>
+  <h1 class="temperatuurArticle_h1">Temperatuur: {{$temp = 20}} °C</h1>
   <h2 class="temperatuurArticle_h2" id="js--temperatuurArticle_h2">Advies</h2>
   <p class="temperatuurArticle_p" id="js--p_advies">Hier komt het advies te staan.</p>
   <p class="temperatuurArticle_p" id="js--p_advies_2"></p>
-  <p class="temperatuurArticle_p" id="js--p_advies_3"></p>
-  <a href="/"><button class="temperatuurArticle_button">Meet opnieuw</button></a>
-  <a href="/tempInfo"><button class="temperatuurArticle_button">Alle informatie</button></a>
+  <p class="temperatuurArticle_p3" id="js--p_advies_3"></p>
+  <section class="temperatuurArticle_button_meting">
+  <a href="/temperatuur" id="js--temperatuurArticle_button" class="temperatuurArticle_button">Meet opnieuw</a>
+  <a href="/tempInfo" id="js--temperatuurArticle_button" class="temperatuurArticle_button">Alle informatie</a>
+</section>
 </article>
 </main>
 <script>
-console.log('help');
 if({{$temp}} <= 17){
   document.getElementById("js--p_advies").innerHTML = "Koude lucht kan je klachten erger maken. Adem bij koud weer zoveel mogelijk door de neus om de lucht te verwarmen voordat deze wordt ingeademd. Zet zo mogelijk de verwarming wat hoger, de beste temperatuur voor binnenshuis is rond de 18 tot 20 graden.";
 
@@ -37,6 +38,7 @@ if({{$temp}} <= 17){
   document.getElementById("js--temperatuurArticle_h2").innerHTML = "Advies: te koud";
   
   document.getElementById("js--temperatuurArticle").style.backgroundColor ="#3c59b6";
+  document.getElementById("js--temperatuurArticle_button").style.backgroundColor ="#fff3e6";
 }
 
 if({{$temp}} >= 18 && {{$temp}} <= 21){
