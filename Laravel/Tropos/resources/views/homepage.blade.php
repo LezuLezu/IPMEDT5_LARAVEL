@@ -22,10 +22,7 @@ Home
 <main class="monoxideMainInfo">
     <section class="homepageCard" onclick=temperaturePage()>
         <h2 class="monoxideMain__h2">Temperatuur</h2>
-        <!-- <p class="monoxideMain__explanation">Koolstofmonoxide (CO) is een gas die ontstaat bij een onvolledige verbranding.
-        Het is een levensgevaarlijk, giftig, brandbaar en explosief gas. Wat het zo gevaarlijk maakt is dat het niet te ruiken,
-        proeven of zien is. Het wordt daarom ook wel de stille sluipmoordenaar genoemd.
-        Neem daarom voorzorgsmaatregelen om het risico op koolmonoxidevergiftiging te verkleinen.</p> -->
+        <p class="monoxideMain__explanation">De temperatuur in huis kan een grote invloed hebben op asthma. Zo kan een warme temperatuur ervoor zorgen dat je sneller kortademig bent en een koude temperatuur kan ervoor zorgen dat je klachten erger worden.</p>
     </section>
 
     <section class="homepageCard" onclick=humidityPage()>

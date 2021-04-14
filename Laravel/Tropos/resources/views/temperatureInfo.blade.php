@@ -16,14 +16,14 @@ Temperatuur informatie
         <a class="nav__link" href="/monoxide">Koolmonoxide</a>
     </nav>  
 </header>
-<main>
-<h1 class="temperatuurArticle_h1">Hier staan alle adviezen voor de temperatuur in huis.</h1>
+<main class="main">
+<h1 class="temperatuurArticle_h1 temperatuurArticle_h1_info">Hier staan alle adviezen voor de temperatuur in huis.</h1>
 <article class="temperatuurArticle_info">
   <h2 class="temperatuurArticle_h2">Algemeen advies bij een goede temperatuur</h2>
-  <p class="temperatuurArticle_p">Zorg voor een gelijkmatig verwarmde woning. Laat ook de dag- en nachttemperatuur in huis zo min mogelijk verschillen. Overdag 21 graden Celsius en ’s nachts 18 graden Celsius is een mooi gemiddelde. De temperatuur in de gehele woning dient 18 tot 21 graden te zijn.
+  <p class="temperatuurArticle_p_goed">Zorg voor een gelijkmatig verwarmde woning. Laat ook de dag- en nachttemperatuur in huis zo min mogelijk verschillen. Overdag 21 graden Celsius en ’s nachts 18 graden Celsius is een mooi gemiddelde. De temperatuur in de gehele woning dient 18 tot 21 graden te zijn.
     Gebruik binnenshuis liever geen kaarsen, en zeker geen geurkaarsen. Kaarsen zorgen ervoor dat de lucht die je inademt minder schoon is en hierdoor kunnen je klachten verergeren. 
     Neem zo nodig extra medicijnen. Hou je wel aan de voorgeschreven dosering.</p>
-    <a href="/"><button class="temperatuurArticle_button temperatuurArticle_button_info">Temperatuur meten</button></a>
+    <a href="/temperatuur" class="temperatuurArticle_button temperatuurArticle_button_info">Temperatuur meten</a>
 </article>
 <article class="temperatuurArticle_info temperatuurArticle_warm">
   <h2 class="temperatuurArticle_h2">Advies voor een warme temperatuur in huis.</h2>
