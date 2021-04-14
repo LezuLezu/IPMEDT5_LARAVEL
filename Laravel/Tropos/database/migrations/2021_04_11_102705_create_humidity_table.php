@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAirpressureTable extends Migration
+class CreateHumidityTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateAirpressureTable extends Migration
      */
     public function up()
     {
-        Schema::create('airpressure', function (Blueprint $table) {
-            $table->double('measurement', 8, 4)->default(0);
+        Schema::create('humidity', function (Blueprint $table) {
+            $table->id();
+            $table->integer('luchtvochtigheid');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +27,6 @@ class CreateAirpressureTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('airpressure');
+        Schema::dropIfExists('humidity');
     }
 }
