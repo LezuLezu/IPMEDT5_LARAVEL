@@ -14,6 +14,8 @@ use App\Http\Controllers\BuzzerController;
 |
 */
 
+
+Route::get('/humidity', '\App\Http\Controllers\HumidityController@showHum');
 Route::get('/airpressure', 'App\Http\Controllers\AirpressureController@show');
 
 Route::get('/temperatuur', 'App\Http\Controllers\TemperatuurController@showTemp');
