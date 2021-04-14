@@ -12,7 +12,7 @@ Home
         <a class="nav__link" href="/temperatuur">Temperatuur</a>
         <a class="nav__link" href="#">Luchtvochtigheid</a>
         <a class="nav__link" href="/airpressure">Luchtdruk</a>
-        <a class="nav__link" href="#">Stof</a>
+        <a class="nav__link" href="/dust">Stof</a>
         <a class="nav__link" href="/monoxide">Koolmonoxide</a>
     </nav>  
 </header>
@@ -88,7 +88,7 @@ Home
     }
 
     function dustPage() {
-        location.href=""; 
+        location.href="/dust"; 
     }
 
     function monoxidePage() {
