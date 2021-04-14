@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
             TemperatureTableSeeder::class,
             CarbonMonoxideTableSeeder::class,
             BuzzerTableSeeder::class
-
         ]);
     }
 }
