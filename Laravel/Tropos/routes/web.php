@@ -24,3 +24,6 @@ Route::get('/monoxideInformation', 'App\Http\Controllers\MonoxideController@show
 Route::get('/buzzer', [BuzzerController::class, 'aanuit']);
 
 Route::get('/home', 'App\Http\Controllers\HomepageController@show');
+Route::get('/dust', '\App\Http\Controllers\DustController@show');
+Route::get('/dustavg', '\App\Http\Controllers\DustController@average');
+
