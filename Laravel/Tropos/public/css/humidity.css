@@ -45,6 +45,7 @@
     transform: translateY(-85%);
     text-align: right;
     float: right;
+    margin-right: 1rem;
     font-size: 3rem;
     font-weight: bold;
 }
