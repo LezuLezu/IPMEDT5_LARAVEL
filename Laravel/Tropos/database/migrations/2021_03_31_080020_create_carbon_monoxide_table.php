@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLedTemperatureTable extends Migration
+class CreateCarbonMonoxideTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateLedTemperatureTable extends Migration
      */
     public function up()
     {
-        Schema::create('led_temperature', function (Blueprint $table) {
-          $table->bigIncrements('id');
-          $table->string('led_on');
+        Schema::create('carbon_monoxide', function (Blueprint $table) {
+            $table->integer('amount')->default(0);
         });
     }
 
@@ -26,6 +25,6 @@ class CreateLedTemperatureTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('led_temperature');
+        Schema::dropIfExists('carbon_monoxide');
     }
 }

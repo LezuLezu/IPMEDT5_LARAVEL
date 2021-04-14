@@ -12,4 +12,8 @@ class TemperatuurController extends Controller
     $temp = \App\Models\Temperatuur::first()->temperatuur;
     return view('temperature', ['temp' => $temp]);
   }
+
+  public function showTempInfo(){
+    return view('temperatureInfo');
+  }
 }

@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use DB;
 
-class TemperatureTableSeeder extends Seeder
+class CarbonMonoxideTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,8 +14,8 @@ class TemperatureTableSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('temperature')->insert([
-        'temperatuur' => 20.00,
-      ]);
+        DB::table('carbon_monoxide')->insert([
+            'amount' => 0
+        ]);
     }
 }

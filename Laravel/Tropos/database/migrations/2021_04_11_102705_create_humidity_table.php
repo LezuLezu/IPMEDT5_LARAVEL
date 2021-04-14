@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLedTemperatureTable extends Migration
+class CreateHumidityTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateLedTemperatureTable extends Migration
      */
     public function up()
     {
-        Schema::create('led_temperature', function (Blueprint $table) {
-          $table->bigIncrements('id');
-          $table->string('led_on');
+        Schema::create('humidity', function (Blueprint $table) {
+            $table->id();
+            $table->integer('luchtvochtigheid');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +27,6 @@ class CreateLedTemperatureTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('led_temperature');
+        Schema::dropIfExists('humidity');
     }
 }

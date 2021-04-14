@@ -14,11 +14,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+
+            humidityTableSeeder::class,
             airpressureTableSeeder::class,
             heaterAirpressureTableSeeder::class,
             windowAirpressureTableSeeder::class,
-            // LedTableSeeder::class,
-            // TemperatureTableSeeder::class
+            LedTableSeeder::class,
+            TemperatureTableSeeder::class,
+            CarbonMonoxideTableSeeder::class,
+            BuzzerTableSeeder::class
         ]);
     }
 }
