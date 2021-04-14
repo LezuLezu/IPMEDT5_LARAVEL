@@ -10,8 +10,39 @@ Luchtvochtigheid
         //javaScript
         window.onload=function(){
 
+            statusWaarde();
             laatsteWaarde();
             trim();
+
+            function statusWaarde(){
+                humWaarde = String({{$hum->luchtvochtigheid}})
+                if(humWaarde >= 60){
+                    document.getElementById('-js--statusWaarde').innerHTML="De luchtvochtigheid is te hoog!"
+                    document.getElementById('-js--statusWaardeKleur').style.backgroundColor = "#DC4D41"
+                } else 
+                
+                if(humWaarde >= 55 && humWaarde < 60){
+                    document.getElementById('-js--statusWaarde').innerHTML="De luchtvochtigheid is hoog."
+                    document.getElementById('-js--statusWaardeKleur').style.backgroundColor = "#FFC95F"
+                    document.getElementById('-js--statusWaarde').style.color = "black"
+                } else 
+                
+                if(humWaarde >= 45 && humWaarde < 55){
+                    document.getElementById('-js--statusWaarde').innerHTML="De luchtvochtigheid is goed"
+                    document.getElementById('-js--statusWaardeKleur').style.backgroundColor = "#43B581"
+                } else 
+                
+                if(humWaarde >= 40 && humWaarde < 45){
+                    document.getElementById('-js--statusWaarde').innerHTML="De luchtvochtigheid is laag"
+                    document.getElementById('-js--statusWaardeKleur').style.backgroundColor = "#FFC95F"
+                    document.getElementById('-js--statusWaarde').style.color = "black"
+                } else 
+                
+                if(humWaarde < 40){
+                    document.getElementById('-js--statusWaarde').innerHTML="De luchtvochtigheid is te laag!"
+                    document.getElementById('-js--statusWaardeKleur').style.backgroundColor = "#DC4D41"
+                }
+            }
 
             function laatsteWaarde(){
                 hum = String({{$hum->luchtvochtigheid}})
@@ -137,6 +168,9 @@ Luchtvochtigheid
     <div class="container">
         <div class="container__section">
             <ul class="container__section__list">
+                 <li class="container__section__list__message" id="-js--statusWaardeKleur">
+                    <h2 id="-js--statusWaarde">{{$hum->luchtvochtigheid}}</h2>
+                </li>
                 <li class="container__section__list__hum">
                     <h2 id="-js--laatsteWaarde">{{$hum->luchtvochtigheid}}</h2>
                 </li>
