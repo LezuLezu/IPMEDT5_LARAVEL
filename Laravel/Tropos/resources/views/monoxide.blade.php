@@ -57,7 +57,7 @@ Koolmonoxide
         result.innerHTML = "Het koolmonoxide gehalte is goed.";  //niks doen
         result__explained.innerHTML = "Het gehalte is niet schadelijk voor je gezondheid. Je hoeft niks te veranderen aan de ruimte.";
         section.style.backgroundColor ="#abe8af";
-        buttonBuzzer.style.display = "none";
+        // buttonBuzzer.style.display = "none";
     }
 
     if( {{$carbon_monoxide}} >= 200 && {{$carbon_monoxide}} <= 400){
