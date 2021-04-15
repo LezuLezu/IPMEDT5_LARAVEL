@@ -1,99 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html{
-    box-sizing: inherit;
-    font-size: 62.5%;
-}
-
-body{
-    font-size: 1.8rem;
-    font-family: sans-serif;
-    background-color: #eef2f6;
-}
-
-/* NAV */
-.nav {
-    overflow: hidden;
-    background-color: #3C59B6;
-}
-
-.nav__link{
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 1.5rem 2.5rem;
-    text-decoration: none;  
-}
-
-.nav__link--img{
-    margin-top: 0.5rem;
-    padding: 0rem 2rem;
-}
-
-.nav__link__current{
-    background-color: #FFC95F;
-    color: black;
-}
-
-.nav__link:hover {
-    background-color: #9FF2F6;
-    color: black;
-}
-
-.nav__link__notHover:hover{
-    background-color: #3C59B6;
-}
-  
-.nav__link.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.nav__link__img{
-    max-width: 4rem;
-}
-
-/* HOMEPAGE */
-.homeHeader{
-    text-align: center;
-    margin: 1rem 0rem 4rem 0rem;
-    font-weight: 500;
-}
-
-.homeInfo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 4rem;
-}
-
-.homepageCard{
-    width:45vw;
-    height: 50vh;
-    margin: 0 auto;
-    box-shadow: 0 0.5rem 2rem black;
-    position: relative;
-    background-color: #fff3e6;
-}
-
-.homepageCard:hover{
-    transform: translateY(-1rem);
-    transition: 0.2s all;
-    box-shadow: 0 1rem 3rem black;
-    cursor: pointer;
-}
-
 /* MONOXIDE MEASSURE PAGE */
 .main{
     padding: 2rem;
 }
 .monoxideSection{
-    width:50vw;
+    width: 50vw;
     height: 80vh;
     margin: 0 auto;
     box-shadow: 0 0.5rem 2rem black;
@@ -127,6 +37,11 @@ body{
     cursor: pointer;
 }
 
+.monoxideSection__button:hover{
+    background-color: #9ff2f6;
+    color: black;
+}
+
 .monoxideSection__button__img{
     width: 3rem;
     float: right;
@@ -136,14 +51,118 @@ body{
     width: 3rem;
     float: right;
     background-color: transparent;
-    margin-top: 0rem;
-    
+    margin-top: 0rem; 
+}
+
+.monoxideSection__button--refreshButton:hover{
+    background-color:transparent;
+    color: #eeeeee;
 }
 
 .monoxideSection__button--buzzer{
     width: 20rem;
     margin-right: 5rem;
     float: right;
+}
+
+@media(max-width: 1200px){
+    .monoxideSection{
+        width: 85vw;
+    }
+}
+
+@media(max-width: 1020px){
+    /* .monoxideSection__button{
+        width: 15rem;
+        font-size: 1.6rem;
+        height: 4rem;
+        margin-top: 3rem;
+    }  */
+    .monoxideSection__button--refreshButton{
+        margin: 0;
+    }
+    /*ALARM BUTOTN DELETE*/
+    .monoxideSection__button--buzzer{
+        width: 15rem !important;
+    } 
+}
+
+@media(max-width: 920px){
+    .monoxideSection{
+        height: 70vh;
+    }
+}
+
+@media(max-width: 550px){
+    .monoxideSection__header{
+        font-size: 2.2rem;
+    }
+    .monoxideSection__result{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 610px){
+    .monoxideSection__button{
+        height: 4rem;
+        margin-top: 2rem;
+        margin-left: 15%;
+    } 
+    .monoxideSection__header{
+        font-size: 2rem;
+    }
+    .monoxideSection__result{
+        font-size: 1.8rem;
+    }
+    /*ALARM BUTOTN DELETE*/
+    .monoxideSection__button--buzzer{
+        width: 20rem !important;
+        margin-right: 0rem;
+        float: none !important;
+    }
+    .monoxideSection__button--refreshButton{
+        margin-top: 0rem;
+    }
+}
+
+@media(max-width: 500px){
+    .monoxideSection__button{
+        margin-left: 10%;
+    } 
+}
+
+@media(max-width: 425px){
+    .monoxideSection{
+        height: 70vh;
+    }
+    .monoxideSection__button{
+        margin-left: 10%;
+        width: 25rem;
+    } 
+    .monoxideSection__button__img{
+        width: 2rem;
+    }
+    .monoxideSection__button--refreshButton{
+        margin-left: 0;
+        margin-top: -3rem;
+    }
+}
+
+@media(max-width: 365px){
+    .monoxideSection__header{
+        font-size: 1.8rem;
+    }
+    .monoxideSection__result{
+        font-size: 1.6rem;
+    }
+    .monoxideSection__button{
+        width: 22rem;
+    } 
+    .monoxideSection__button--refreshButton{
+        margin-left: 0;
+        margin-top: -3rem;
+        margin-right: -2rem;
+    }
 }
 
 
@@ -186,6 +205,91 @@ body{
 
 .monoxideMain__explanation--ul{
     margin: 2rem 4rem;
+}
+
+@media(max-width: 1280px){
+    .monoxideSection__button--measureCO{
+        width: 40rem;
+        margin-left: 35%;
+    }
+    .monoxideSection--monoxideInfo{
+        height: 70vh;
+    }
+}
+
+@media(max-width: 1125px){
+    .monoxideSection--monoxideInfo{
+        height: 80vh;
+    }
+}
+
+@media(max-width: 945px){
+    .monoxideMainInfo{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 4rem;
+    }
+    .monoxideSection__button--measureCO{
+        width: 30rem;
+    }
+    .monoxideSection--monoxideInfo{
+        width: 80vw;
+        height: 55vh;
+    }
+}
+
+@media(max-width: 885px){
+    .monoxideSection--monoxideInfo{
+        height: 65vh;
+    }
+}
+
+@media(max-width: 635px){
+    .monoxideSection__button--measureCO{
+        width: 25rem;
+        margin-left: 30%;
+    }
+    .monoxideSection--monoxideInfo{
+        height: 85vh;
+    }
+}
+
+@media(max-width: 470px){
+    .monoxideInfoTitle{
+        margin: 2rem 0rem 2rem 0rem;
+        font-size: 2.6rem;
+    }
+    .monoxideMain__h2{
+        margin-top: 2.8rem;
+        font-size: 2.4rem;
+    }
+    .monoxideSection__button--measureCO{
+        margin-left: 20%;
+    }
+    .monoxideSection--monoxideInfo{
+        height: 85vh;
+    }
+    .monoxideMain__explanation{
+        font-size: 1.6rem;
+    }
+}
+
+@media(max-width: 400px){
+    .monoxideInfoTitle{
+        font-size: 2.4rem;
+    }
+    .monoxideMain__h2{
+        margin-top: 2.8rem;
+        font-size: 2rem;
+    }
+    .monoxideSection__button--measureCO{
+        margin-left: 15%;
+    }
+    .monoxideSection--monoxideInfo{
+        height: 95vh;
+    }
+    .monoxideMain__explanation{
+        font-size: 1.6rem;
+    }
 }
 
 

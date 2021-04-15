@@ -8,10 +8,48 @@ Luchtvochtigheid
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script>
         //javaScript
-        window.onload=function(){
 
+        var timesClicked = 1;
+        window.onload=function(){
+        
+            statusWaarde();
             laatsteWaarde();
             trim();
+
+            function statusWaarde(){
+                humWaarde = String({{$hum->luchtvochtigheid}})
+                if(humWaarde >= 60){
+                    document.getElementById('-js--statusWaarde').innerHTML="De luchtvochtigheid is te hoog!"
+                    document.getElementById('-js--statusWaardeKleur').style.backgroundColor = "#DC4D41"
+                    document.getElementById('-js--content').innerHTML="Neem medicatie zo snel mogelijk in! Zet ramen open, zet de afzuigkap aan en ventilatoren zodat je geen opgehoopte luchtvochtigheid houdt."
+                } else 
+                
+                if(humWaarde >= 55 && humWaarde < 60){
+                    document.getElementById('-js--statusWaarde').innerHTML="De luchtvochtigheid is hoog."
+                    document.getElementById('-js--statusWaardeKleur').style.backgroundColor = "#FFC95F"
+                    document.getElementById('-js--statusWaarde').style.color = "black"
+                    document.getElementById('-js--content').innerHTML=" "
+                } else 
+                
+                if(humWaarde >= 45 && humWaarde < 55){
+                    document.getElementById('-js--statusWaarde').innerHTML="De luchtvochtigheid is goed"
+                    document.getElementById('-js--statusWaardeKleur').style.backgroundColor = "#43B581"
+                    document.getElementById('-js--content').innerHTML="Nergens om je druk over te maken!"
+                } else 
+                
+                if(humWaarde >= 40 && humWaarde < 45){
+                    document.getElementById('-js--statusWaarde').innerHTML="De luchtvochtigheid is laag"
+                    document.getElementById('-js--statusWaardeKleur').style.backgroundColor = "#FFC95F"
+                    document.getElementById('-js--statusWaarde').style.color = "black"
+                    document.getElementById('-js--content').innerHTML="Neem wat thee, zet de badkamerdeur open of hang natte handdoeken in de kamers. Deze helpen met het snel weer vochtiger maken van de kamer."
+                } else 
+                
+                if(humWaarde < 40){
+                    document.getElementById('-js--statusWaarde').innerHTML="De luchtvochtigheid is te laag!"
+                    document.getElementById('-js--statusWaardeKleur').style.backgroundColor = "#DC4D41"
+                    document.getElementById('-js--content').innerHTML="Neem medicatie zo snel mogelijk in! Als het regent buiten, zet ramen open. Hang natte handdoeken op in het huis, zet een pan met water op het fornuis!"
+                }
+            }
 
             function laatsteWaarde(){
                 hum = String({{$hum->luchtvochtigheid}})
@@ -23,7 +61,7 @@ Luchtvochtigheid
                 document.getElementById('-js--gemiddelde').innerHTML="Gemiddelde: " + avghum + "%"
             }
 
-            var chart = new CanvasJS.Chart("chartContainer", {
+            var chart = new CanvasJS.Chart("-js--chartContainer", {
                 animationEnabled: true,
                 theme: "light2",
                 backgroundColor: "#eef2f6",
@@ -120,6 +158,19 @@ Luchtvochtigheid
             chart.render();
 
         }
+
+        function openTips(){
+            if(timesClicked == 1){
+                document.getElementById("-js--tips").style.height = document.getElementById("-js--content").scrollHeight + 10 + "px"
+                document.getElementById("-js--button").innerHTML = "-"
+                timesClicked = 0
+            } else {
+                document.getElementById("-js--tips").style.height = "0px"
+                document.getElementById("-js--button").innerHTML = "+"
+                timesClicked = 1
+            }
+                 
+        }
     </script>
 
     <header>
@@ -129,24 +180,34 @@ Luchtvochtigheid
             <a class="nav__link" href="/temperatuur">Temperatuur</a>
             <a class="nav__link nav__link__current" href="/humidity">Luchtvochtigheid</a>
             <a class="nav__link" href="/airpressure">Luchtdruk</a>
-            <a class="nav__link" href="#">Stof</a>
+            <a class="nav__link" href="/dust">Stof</a>
             <a class="nav__link" href="/monoxide">Koolmonoxide</a>
         </nav>    
     </header>
 
-    <div class="container">
-        <div class="container__section">
-            <ul class="container__section__list">
-                <li class="container__section__list__hum">
-                    <h2 id="-js--laatsteWaarde">{{$hum->luchtvochtigheid}}</h2>
-                </li>
-                <li class="container__section__list__avg">
-                    <h2 id="-js--gemiddelde">{{$avghum}}</h2>
-                </li>
-                <li class="container__section__list__graph">
-                    <div class="container__section__list__graph__chart" id="chartContainer"></div>
-                </li>
-            </ul>
-        </div>
-    </div>
+    
+    
+    
+
+    <main class="humidity">
+        <section class="humidity__statusWaardeSection" id="-js--statusWaardeKleur" onclick="openTips()">
+            <h2 id="-js--statusWaarde">{{$hum->luchtvochtigheid}}</h2>
+            <div class="humidity__statusWaardeSection__button" id ="-js--button">
+                <p>+</p>
+            </div>
+            <article class="humidity__statusWaardeSection__tips" id="-js--tips">
+                <p id="-js--content">tips over wat te doen bij lage of hoge luchtvochtigheid</p>
+            </article>
+        </section>  
+        <section class="humidity__section">
+            <h2 id="-js--laatsteWaarde">{{$hum->luchtvochtigheid}}</h2>
+        </section>
+        <section class="humidity__section">
+            <h2 id="-js--gemiddelde">{{$avghum}}</h2>
+        </section>
+        <section class="humidity__section">
+            <div class="humidity__section__graph" id="-js--chartContainer"></div>
+        </section> 
+    </main>       
+
  @endsection

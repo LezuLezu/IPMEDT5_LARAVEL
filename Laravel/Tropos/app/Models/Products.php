@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Temperatuur extends Model
+class Products extends Model
 {
-    //model voor de temperature table
-    protected $table = 'temperature';
+    use HasFactory;
+    protected $table ='cleaning_products';
 }
