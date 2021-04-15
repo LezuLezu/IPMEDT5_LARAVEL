@@ -50,7 +50,7 @@
 @media(max-width: 1330px){
     .homeInfo{
         width: 90%;
-        margin: 0rem 5rem;
+        margin: 4rem 5rem;
     }
 }
 
@@ -67,7 +67,7 @@
 @media(max-width: 490px){
     .homeInfo{
         width: 90%;
-        margin: 0rem 3rem;
+        margin: 4rem 3rem;
     }
 
     .homepageCard{
