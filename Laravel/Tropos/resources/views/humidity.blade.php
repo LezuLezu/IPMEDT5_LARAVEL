@@ -190,8 +190,8 @@ Luchtvochtigheid
     </script>
 
     
-    //navigatie gemaakt door Dishang, mogelijk nog in de Baseview worden geïmplementeerd
-    //eigen pagina met gegevens, en een grafiek
+    <!--navigatie gemaakt door Dishang, mogelijk nog in de Baseview worden geïmplementeerd-->
+    <!--eigen pagina met gegevens, en een grafiek-->
     
     @include('nav')
 
