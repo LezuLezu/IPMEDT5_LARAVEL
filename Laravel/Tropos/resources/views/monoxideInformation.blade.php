@@ -1,5 +1,9 @@
 @extends("baseview")
 
+@section('monoxideCSS')
+<link rel="stylesheet" href="/css/monoxide.css">
+@endsection
+
 @section('title')
 Monoxide informatie
 @endsection
@@ -10,7 +14,7 @@ Monoxide informatie
         <a class="nav__link nav__link__notHover nav__link--img" href="/home"><figure><img class="nav__link__img" src="/img/troposLogo.png" alt="logo van Tropos"></figure></a>
         <a class="nav__link" href="/home">Home</a>
         <a class="nav__link" href="/temperatuur">Temperatuur</a>
-        <a class="nav__link" href="#">Luchtvochtigheid</a>
+        <a class="nav__link" href="/humidity">Luchtvochtigheid</a>
         <a class="nav__link" href="/airpressure">Luchtdruk</a>
         <a class="nav__link" href="/dust">Stof</a>
         <a class="nav__link nav__link__current" href="/monoxide">Koolmonoxide</a>
@@ -21,7 +25,7 @@ Monoxide informatie
 <main class="monoxideMainInfo">
     <section class="monoxideSection monoxideSection--monoxideInfo">
         <h2 class="monoxideMain__h2">Wat is koolmonoxide?</h2>
-        <p class="monoxideMain__explanation">Koolstofmonoxide (CO) is een gas die ontstaat bij een onvolledige verbranding.
+        <p class="monoxideMain__explanation">Koolmonoxide (CO) is een gas die ontstaat bij een onvolledige verbranding.
         Het is een levensgevaarlijk, giftig, brandbaar en explosief gas. Wat het zo gevaarlijk maakt is dat het niet te ruiken,
         proeven of zien is. Het wordt daarom ook wel de stille sluipmoordenaar genoemd.
         Neem daarom voorzorgsmaatregelen om het risico op koolmonoxidevergiftiging te verkleinen.</p>
@@ -39,7 +43,7 @@ Monoxide informatie
                 Check regelmatig zelf of de vlam in de geiser blauw is.</li>
             <li>Wil je een gasketel verplaatsen of vervangen? Schakel dan een erkende installateur in,
                 hoe eenvoudig zo’n klusje ook lijkt.</li>
-            <li>Hang koolstofmonoxide melders op.</li>
+            <li>Hang koolmonoxide melders op.</li>
         </ul>
     </section>
 
