@@ -12,6 +12,7 @@ class humidityTableSeeder extends Seeder
      *
      * @return void
      */
+    /*willekeurige gegevens ingezet zodat aan het begin al een gevulde tabel aanwezig is*/
     public function run()
     {
         for($x = 0; $x < 72; $x++) {
