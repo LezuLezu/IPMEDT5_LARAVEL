@@ -26,7 +26,7 @@ Route::get('/monoxide', 'App\Http\Controllers\MonoxideController@show');
 Route::get('/monoxideInformation', 'App\Http\Controllers\MonoxideController@showMonoxideInformation');
 Route::get('/buzzer', [BuzzerController::class, 'aanuit']);
 
-Route::get('/home', 'App\Http\Controllers\HomepageController@show');
+Route::get('/', 'App\Http\Controllers\HomepageController@show');
 
 // Stof routes
 
