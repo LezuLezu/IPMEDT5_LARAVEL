@@ -1,5 +1,9 @@
 @extends("baseview")
 
+@section('monoxideCSS')
+<link rel="stylesheet" href="/css/home.css">
+@endsection
+
 @section('title')
 Home
 @endsection
@@ -19,9 +23,9 @@ Home
 <h1 class="homeHeader">Home</h1>
 <p class="homeInfo">Welkom bij het systeem Tropos. Hier op de pagina staan alle vijf de subsystemen.
    Klik op het systeem waar je de waarde van wil meten en informatie over wil lezen.</p>
-<main class="monoxideMainInfo">
+<main class="monoxideMainInfo">                     <!--class name from monoxide because they have the same css code -->
     <section class="homepageCard" onclick=temperaturePage()>
-        <h2 class="monoxideMain__h2">Temperatuur</h2>
+        <h2 class="monoxideMain__h2">Temperatuur</h2>               <!--class name from monoxide because they have the same css code -->
         <p class="monoxideMain__explanation">De temperatuur in huis kan een grote invloed hebben op asthma. Zo kan een warme temperatuur ervoor zorgen dat je sneller kortademig bent en een koude temperatuur kan ervoor zorgen dat je klachten erger worden.</p>
     </section>
 
@@ -66,11 +70,11 @@ Home
     </section>
 
     <section class="homepageCard" onclick=monoxidePage()>
-        <h2 class="monoxideMain__h2">Koolmonoxide</h2>
-        <p class="monoxideMain__explanation">Koolstofmonoxide (CO) is een gas die ontstaat bij een onvolledige verbranding.
+        <h2 class="monoxideMain__h2">Koolmonoxide</h2>          <!--class name from monoxide because they have the same css code -->
+        <p class="monoxideMain__explanation">Koolmonoxide (CO) is een gas die ontstaat bij een onvolledige verbranding.
         Het is een levensgevaarlijk, giftig, brandbaar en explosief gas. Wat het zo gevaarlijk maakt is dat het niet te ruiken,
         proeven of zien is. Het wordt daarom ook wel de stille sluipmoordenaar genoemd.
-        Neem daarom voorzorgsmaatregelen om het risico op koolmonoxidevergiftiging te verkleinen.</p>
+        Neem daarom voorzorgsmaatregelen om het risico op koolmonoxidevergiftiging te verkleinen.</p>       <!--class name from monoxide because they have the same css code -->
     </section>
 </main>
 

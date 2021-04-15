@@ -1,5 +1,9 @@
 @extends("baseview")
 
+@section('monoxideCSS')
+<link rel="stylesheet" href="/css/monoxide.css">
+@endsection
+
 @section('title')
 Monoxide informatie
 @endsection
@@ -21,7 +25,7 @@ Monoxide informatie
 <main class="monoxideMainInfo">
     <section class="monoxideSection monoxideSection--monoxideInfo">
         <h2 class="monoxideMain__h2">Wat is koolmonoxide?</h2>
-        <p class="monoxideMain__explanation">Koolstofmonoxide (CO) is een gas die ontstaat bij een onvolledige verbranding.
+        <p class="monoxideMain__explanation">Koolmonoxide (CO) is een gas die ontstaat bij een onvolledige verbranding.
         Het is een levensgevaarlijk, giftig, brandbaar en explosief gas. Wat het zo gevaarlijk maakt is dat het niet te ruiken,
         proeven of zien is. Het wordt daarom ook wel de stille sluipmoordenaar genoemd.
         Neem daarom voorzorgsmaatregelen om het risico op koolmonoxidevergiftiging te verkleinen.</p>
@@ -39,7 +43,7 @@ Monoxide informatie
                 Check regelmatig zelf of de vlam in de geiser blauw is.</li>
             <li>Wil je een gasketel verplaatsen of vervangen? Schakel dan een erkende installateur in,
                 hoe eenvoudig zo’n klusje ook lijkt.</li>
-            <li>Hang koolstofmonoxide melders op.</li>
+            <li>Hang koolmonoxide melders op.</li>
         </ul>
     </section>
 
