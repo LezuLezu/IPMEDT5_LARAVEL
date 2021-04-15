@@ -19,7 +19,6 @@ class DatabaseSeeder extends Seeder
             airpressureTableSeeder::class,
             heaterAirpressureTableSeeder::class,
             windowAirpressureTableSeeder::class,
-            LedTableSeeder::class,
             TemperatureTableSeeder::class,
             CarbonMonoxideTableSeeder::class,
             BuzzerTableSeeder::class,
