@@ -4,6 +4,10 @@
 Luchtvochtigheid
 @endsection
 
+@section('css')
+<link rel="stylesheet" href="/css/humidity.css">
+@endsection
+
 @section('body')
 
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
