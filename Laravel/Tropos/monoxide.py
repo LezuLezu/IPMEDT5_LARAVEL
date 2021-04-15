@@ -14,6 +14,7 @@ port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=3.0)
 mycursor = mydb.cursor()
 
 while True:
+    time.sleep(180)     #SLEEP FOR THE CO METER (TEST CODE WITHOUT)
     mycursor.execute("SELECT * FROM buzzers;")
     for x in mycursor:
         print(x[3])
