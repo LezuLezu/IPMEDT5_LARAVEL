@@ -14,7 +14,7 @@ class CreateTemperatureTable extends Migration
     public function up()
     {
         Schema::create('temperature', function (Blueprint $table) {
-            $table->float("temperatuur", 10, 5);
+            $table->float("temperatuur", 10, 5); //maak een float aan voor de temperatuur meting
         });
     }
 

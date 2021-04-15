@@ -15,6 +15,7 @@ body{
     font-family: sans-serif;
 }
 
+/* css voor de temperatuur pagina's */
 .temperatuurArticle{
     background-color: #fff3e6;
     width:50vw;
@@ -22,8 +23,10 @@ body{
     margin: 0 auto;
     box-shadow: 0 0.5rem 2rem black;
     position: relative;
+    margin-top: 2rem;
 }
 
+/* Styling van de tekst */
 .temperatuurArticle_h1{
     padding: 3rem;
     padding-left: 4rem;
@@ -51,6 +54,7 @@ body{
     margin-bottom: 5rem;
 }
 
+/* Styling van de a href buttons */
 .temperatuurArticle_button{
     font-size: 100%;
     width: 18rem;
@@ -85,13 +89,28 @@ body{
     justify-content: center;
 }
 
+/* Refresh icon button */
+.temperatuur_button_img{
+    width: 3rem;
+    float: right;
+}
+
+.temperatuur_button--refreshButton{
+    border: none;
+    width: 3rem;
+    float: right;
+    background-color: transparent;
+    margin-top: 0rem; 
+}
+
+/* Button hover styling */
 .temperatuurArticle_button:hover{
     cursor: pointer;
     background-color: #9ff2f6;
     color: black;
     
 }
-
+/* Styling van de articles met alle adviezen en informatie */
 .temperatuurArticle_info{
     background-color: #fff3e6;
     width:45vw;
@@ -105,10 +124,12 @@ body{
     margin-left: 2rem;
 }
 
+/* Kleur voor het article met de informatie over een te koude temperatuur */
 .temperatuurArticle_koud{
     background-color: #3c59b6;
 }
 
+/* Kleur voor het article met de informatie over een te warme temperatuur */
 .temperatuurArticle_warm{
     background-color: #ffc95f;
 }
@@ -218,6 +239,7 @@ body{
 @media(max-width: 45rem){
     .temperatuurArticle_info{
         width:90vw;
+        height: 65vh;
     }
 
     .temperatuurArticle_h1_info{
@@ -234,10 +256,9 @@ body{
     }
 }
 
-
 @media(max-width: 34rem){
     .temperatuurArticle_info{
-        height: 70vh;
+        height: 75vh;
     }
 
     .temperatuurArticle{
@@ -271,7 +292,7 @@ body{
 }
 
 @media(max-width: 25rem){
-    .main{
+    .temperatuur_main{
         padding: 0.5rem;
     }
 
@@ -301,13 +322,13 @@ body{
     }
 
     .temperatuurArticle_info{
-        height: 80vh;
+        height: 90vh;
     }
 }
 
 @media(max-width: 20rem){
     .temperatuurArticle_info{
-        height: 85vh;
+        height: 100vh;
     }
 }
 

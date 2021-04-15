@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Temperatuur extends Model
 {
+    //model voor de temperature table
     protected $table = 'temperature';
 }

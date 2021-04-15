@@ -15,6 +15,7 @@ class TemperatureTableSeeder extends Seeder
     public function run()
     {
       DB::table('temperature')->insert([
+        //de standaardtemperatuur wordt voor het begin op 20 graden gezet
         'temperatuur' => 20.00,
       ]);
     }
