@@ -23,17 +23,18 @@ Route::post('/airpressure', 'App\Http\Controllers\AirpressureController@store');
 Route::get('/temperatuur', 'App\Http\Controllers\TemperatuurController@showTemp');
 Route::get('/tempInfo', 'App\Http\Controllers\TemperatuurController@showTempInfo');
 
+//MONOXIDE ROUTES
 Route::get('/monoxide', 'App\Http\Controllers\MonoxideController@show');
 Route::get('/monoxideInformation', 'App\Http\Controllers\MonoxideController@showMonoxideInformation');
 Route::get('/buzzer', [BuzzerController::class, 'aanuit']);
 
+//HOME ROUTES
 Route::get('/home', 'App\Http\Controllers\HomepageController@show');
 Route::get('/', function () {
     return redirect('/home');
 });
 
 // Stof routes
-
 Route::get('/dust', '\App\Http\Controllers\DustController@index');
 Route::get('/dust/show', '\App\Http\Controllers\DustController@show');
 Route::get('/dust/avg', '\App\Http\Controllers\DustController@average');

@@ -9,17 +9,10 @@ Monoxide informatie
 @endsection
 
 @section('body')
-<header>
-    <nav class="nav">
-        <a class="nav__link nav__link__notHover nav__link--img" href="/home"><figure><img class="nav__link__img" src="/img/troposLogo.png" alt="logo van Tropos"></figure></a>
-        <a class="nav__link" href="/home">Home</a>
-        <a class="nav__link" href="/temperatuur">Temperatuur</a>
-        <a class="nav__link" href="/humidity">Luchtvochtigheid</a>
-        <a class="nav__link" href="/airpressure">Luchtdruk</a>
-        <a class="nav__link" href="/dust">Stof</a>
-        <a class="nav__link nav__link__current" href="/monoxide">Koolmonoxide</a>
-    </nav>  
-</header>
+
+@include('nav')
+
+<!-- information CO -->
 <h1 class="monoxideInfoTitle">Informatie over koolmonoxide</h1>
 <button class="monoxideSection__button monoxideSection__button--measureCO" onclick=monoxide()>Koolmonoxide gehalte meten</button>
 <main class="monoxideMainInfo">
@@ -31,6 +24,7 @@ Monoxide informatie
         Neem daarom voorzorgsmaatregelen om het risico op koolmonoxidevergiftiging te verkleinen.</p>
     </section>
 
+    <!-- PREVENT CO -->
     <section class="monoxideSection monoxideSection--monoxideInfo">
         <h2 class="monoxideMain__h2">Koolmonoxide voorkomen</h2>
         <p class="monoxideMain__explanation">Voorkomen dat er koolmonoxide vrijkomt is natuurlijk het beste wat je kunt doen.
@@ -47,6 +41,7 @@ Monoxide informatie
         </ul>
     </section>
 
+    <!-- RECOGNIZE CO -->
     <section class="monoxideSection monoxideSection--monoxideInfo">
         <h2 class="monoxideMain__h2">Koolmonoxide herkennen</h2>
         <p class="monoxideMain__explanation">Koolmonoxide is onzichtbaar.
@@ -60,6 +55,7 @@ Monoxide informatie
     </section>
 
 
+    <!-- ACTION AGAINST CO -->
     <section class="monoxideSection monoxideSection--monoxideInfo">
         <h2 class="monoxideMain__h2">Acties bij koolmonoxide in huis</h2>
         <p class="monoxideMain__explanation">Als je denkt dat er koomonoxide binnen is doe dan de volgende dingen:</p>

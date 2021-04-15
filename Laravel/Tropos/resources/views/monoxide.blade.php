@@ -9,26 +9,18 @@ Koolmonoxide
 @endsection
 
 @section('body')
-<header>
-    <nav class="nav">
-        <a class="nav__link nav__link__notHover nav__link--img" href="/home"><figure><img class="nav__link__img" src="/img/troposLogo.png" alt="logo van Tropos"></figure></a>
-        <a class="nav__link" href="/home">Home</a>
-        <a class="nav__link" href="/temperatuur">Temperatuur</a>
-        <a class="nav__link" href="/humidity">Luchtvochtigheid</a>
-        <a class="nav__link" href="/airpressure">Luchtdruk</a>
-        <a class="nav__link" href="/dust">Stof</a>
-        <a class="nav__link nav__link__current" href="/monoxide">Koolmonoxide</a>
-    </nav>  
-</header>
+
+@include('nav')
+
 <main class="main">
     <section class="monoxideSection" id="js--monoxideSection">
         <h1 class="monoxideSection__header">Koolmonoxide: {{$carbon_monoxide}} ppm
         <button class="monoxideSection__button monoxideSection__button--refreshButton" onclick=refresh()><img class="monoxideSection__button__img" src="/img/refresh.png" alt="Refresh logo"></button>
-        </h1>
-        <h2 class="monoxideSection__result" id="js--result">Gehalte advies</h2>
-        <p class="monoxideSection__result__advice" id="js--result__explained">Uitleg van het resultaat</p>
-        <p class="monoxideSection__result__advice" id="js--result__solution"></p>
-        <p class="monoxideSection__result__advice" id="js--result__hardware"></p>
+        </h1>       <!-- value of monoxide -->  
+        <h2 class="monoxideSection__result" id="js--result">Gehalte advies</h2>         <!-- specified advice -->
+        <p class="monoxideSection__result__advice" id="js--result__explained">Uitleg van het resultaat</p>      <!-- value explained -->
+        <p class="monoxideSection__result__advice" id="js--result__solution"></p>        <!-- solution to lower the value -->
+        <p class="monoxideSection__result__advice" id="js--result__hardware"></p>        <!-- included hardware -->
 
         <button class="monoxideSection__button" onclick=informationMonoxide()>Informatie over koolmonoxide</button>
         <!-- <button class="monoxideSection__button monoxideSection__button--buzzer" id="js--button__buzer" onclick=stopBuzzer()>Alarm uit</button>         NIET MEER NODIG UIT VOLGENS HET TESTEN-->
@@ -36,9 +28,9 @@ Koolmonoxide
 </main>
 
 <script>
-    function stopBuzzer() {
-        location.href='{{"/buzzer"}}'; 
-    }
+    // function stopBuzzer() {
+    //     location.href='{{"/buzzer"}}'; 
+    // }
 
     function informationMonoxide(){
         location.href="/monoxideInformation";
@@ -82,7 +74,7 @@ Koolmonoxide
         //buttonBuzzer.style.display = "none";    //ALARM BUTTON BUT ALARM ISNT ON
     }
 
-    // ALARM GOES ON
+    // ALARM GOES ON VALUE TO HIGH
     if( {{$carbon_monoxide}} >= 800){
         result.innerHTML = "Verlaat de ruimte! Het koolmonoxide gehalte is te hoog";
         result__explained.innerHTML = "Het gehalte is te hoog. Verlaat zo snel mogelijk de ruimte. Het kan ernstige gevolgen hebben als je blijft.";   
