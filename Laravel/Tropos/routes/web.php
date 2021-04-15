@@ -33,5 +33,5 @@ Route::get('/dust', '\App\Http\Controllers\DustController@index');
 Route::get('/dust/show', '\App\Http\Controllers\DustController@show');
 Route::get('/dust/avg', '\App\Http\Controllers\DustController@average');
 Route::get('/dust/create', '\App\Http\Controllers\CleaningController@create');
-Route::post('/dust', '\App\Http\Controllers\CleaningController@store');
+Route::post('/dust/clean', '\App\Http\Controllers\CleaningController@store');
 Route::get('/dust/clean', '\App\Http\Controllers\CleaningController@show');

@@ -1,10 +1,19 @@
 @extends('baseview')
-    @section('title')
-        Schoongemaakt
-    @endsection
+<!-- css en js  -->
+@section('dustFiles')
+<link rel="stylesheet" href="/css/dust.css">
+<script type="text/javascript" src="/js/dust.js"></script>
+@endsection
+<!-- title -->
+@section('title')
+    Schoongemaakt
+@endsection
     @section('body')
+    <!-- nav -->
         @include('dust.components.dustNav')
+        <main class="main">
         <article class="create-form">
+            <!-- schoonmaken invullen -->
             <form class="create-form__form" action="/dust/clean" method="POST">
                 @csrf
                 <p class="create-form__text"> Waarmee heb je schoongemaakt? </p>
@@ -35,6 +44,11 @@
                     <button class="create-form__button" type="submit">Verzend</button>
                 </section>
             </form>
+            <!-- terug naar indexpage -->
+            <section class='buttonSection'>
+                    <button class="dustCard__button" onclick="window.location.href='/dust'"> Terug </button>
+            </section>
         </article>
+</main>
 
     @endsection
