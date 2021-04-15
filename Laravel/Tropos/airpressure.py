@@ -13,6 +13,7 @@ mydb = mysql.connector.connect(
 port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=3.0)
 mycursor = mydb.cursor()
 
+# sleep zodat de sensoren en motoren kunnen opwarmen
 time.sleep(15)
 
 mycursor.execute("SELECT * FROM airpressure;")
@@ -22,6 +23,7 @@ for x in mycursor:
     port.write(str(x[2]))
 
 while True:
+    # gewenste luchtdruk die is opgeslagen in database ophalen en schrijven naar de arduino
     mycursor.execute("SELECT * FROM airpressure;")
     for x in mycursor:
         print(x[2])
@@ -30,6 +32,7 @@ while True:
             gewenste_luchtdruk = x[2]
             port.write(str(x[2]))
 
+    # lijnen lezen die door de arduino is gestuurd en daarmee de data opslaan in de database
     airpressure = port.readline().strip()
     print(airpressure)
     if(airpressure[0] == 'P'):
@@ -42,7 +45,7 @@ while True:
 
     
 
-    time.sleep(2)
+    time.sleep(0)
     mydb.commit()
 
 mydb.close()

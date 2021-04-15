@@ -43,14 +43,13 @@ Home
 
     <section class="homepageCard" onclick=airPressurePage()>
         <h2 class="monoxideMain__h2">Luchtdruk</h2>
-        <!-- <p class="monoxideMain__explanation">Koolmonoxide is onzichtbaar.
-            Maar er zijn een paar dingen die je waarschuwen voor de aanwezigheid van koolmonoxide:</p>
+        <p class="monoxideMain__explanation">Een te hoog of een te laag luchtdruk kan invloed hebben op je welzijn. 
+        Het verschil in luchtdruk tussen ruimtes kan ook invloed hebben op je welzijn. 
+        Zo kan het zijn als het verschil in luchtdruk tussen ruimtes of tussen binnen en buiten hoofdpijn kan veroorzaken.
+        Of een te lage luchtdruk kan er voor zorgen dat je lastiger kan ademen.
+        Het gemiddelde luchtdruk in een kamer is 1024 pHa en in de avond kan dat oplopen tot 1035 pHa.</p>
         <ul class="monoxideMain__explanation monoxideMain__explanation--ul">
-            <li>Lichamelijke klachten zoals hoofdpijn, misselijkheid, sufheid, duizeligheid, vermoeidheid, bewusteloosheid, 
-                een versnelde hartslag en braken. De klachten nemen langzaam af zodra je naar buiten gaat.</li>
-            <li>Ramen beslaan door het vrijgekomen vocht.</li>
-            <li>Gasvlammen gaan oranje of gelig branden in plaats van blauw. Ze branden ook hoger dan normaal en flakkeren meer.</li>
-        </ul> -->
+        </ul>
     </section>
 
 

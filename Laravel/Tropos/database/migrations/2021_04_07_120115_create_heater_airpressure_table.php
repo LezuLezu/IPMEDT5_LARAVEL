@@ -14,7 +14,7 @@ class CreateHeaterAirpressureTable extends Migration
     public function up()
     {
         Schema::create('heater_airpressure', function (Blueprint $table) {
-            $table->string('heater_on', 255)->default('off');
+            $table->string('heater_on', 255)->default('off');   //verwarming die aan of uit staat. Data komt van de arduino
         });
     }
 

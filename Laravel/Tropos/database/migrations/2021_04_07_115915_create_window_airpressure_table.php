@@ -14,7 +14,7 @@ class CreateWindowAirpressureTable extends Migration
     public function up()
     {
         Schema::create('window_airpressure', function (Blueprint $table) {
-            $table->string('window_open', 255)->default('closed');
+            $table->string('window_open', 255)->default('closed');  //raam die open of closed is. Data komt van de arduino
         });
     }
 
