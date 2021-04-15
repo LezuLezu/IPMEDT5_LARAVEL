@@ -31,18 +31,10 @@ Home
 
     <section class="homepageCard" onclick=humidityPage()>
         <h2 class="monoxideMain__h2">Luchtvochtigheid</h2>
-        <!-- <p class="monoxideMain__explanation">Voorkomen dat er koolmonoxide vrijkomt is natuurlijk het beste wat je kunt doen.
-            Hierbij helpen de volgende dingen:</p>
-        <ul class="monoxideMain__explanation monoxideMain__explanation--ul">
-            <li>Ventileer je huis permanent, zorg altijd voor frisse lucht.</li>
-            <li>Meer dan de helft van de vergiftigingen veroorzaakt worden door (moderne en/of nieuwe) cv-ketels.
-                Laat deze dus elk jaar controleren door een erkend bedrijf.</li>
-            <li>Als je een geiser hebt, laat die ook jaarlijks controleren door een erkend bedrijf.
-                Check regelmatig zelf of de vlam in de geiser blauw is.</li>
-            <li>Wil je een gasketel verplaatsen of vervangen? Schakel dan een erkende installateur in,
-                hoe eenvoudig zo’n klusje ook lijkt.</li>
-            <li>Hang koolstofmonoxide melders op.</li>
-        </ul> -->
+        <p class="monoxideMain__explanation">De luchtvochtigheid kan veel effect hebben op de kwaliteit van lucht.
+            Bij astma kan dit een benauwd gevoel geven. Als de luchtvochtigheid boven de 60% of onder de 40% komt, kan het zelfs schadelijk zijn.
+            Klik op de banner om naar de Luchtvochtigheidpagina te gaan voor de laatste waarden en advies!
+        </p>
     </section>
 
     <section class="homepageCard" onclick=airPressurePage()>
@@ -83,7 +75,7 @@ Home
     }
 
     function humidityPage() {
-        location.href=""; 
+        location.href="/humidity"; 
     }
 
     function airPressurePage() {

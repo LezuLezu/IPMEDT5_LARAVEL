@@ -5,9 +5,10 @@ Luchtvochtigheid
 @endsection
 
 @section('body')
+
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script>
-        //javaScript
+     //javaScript
 
         var timesClicked = 1;
         window.onload=function(){
@@ -15,6 +16,8 @@ Luchtvochtigheid
             statusWaarde();
             laatsteWaarde();
             trim();
+
+            //aangeven luchtvochtigheid (te) hoog/laag, met kleurverandering bericht en advies bij elke situatie
 
             function statusWaarde(){
                 humWaarde = String({{$hum->luchtvochtigheid}})
@@ -51,15 +54,22 @@ Luchtvochtigheid
                 }
             }
 
+            //weergave van laatst geregistreerde waarde door de sensor (deze wordt op het moment eens per minuut verzonden)
+
             function laatsteWaarde(){
                 hum = String({{$hum->luchtvochtigheid}})
                 document.getElementById('-js--laatsteWaarde').innerHTML="Luchtvochtigheid nu: " + hum + "%"
             }
 
+            //weergave van gemiddelde luchtvochtigheid met een afronding van het getal zodat deze op een geheel getal uitkomt
+
             function trim(){
                 avghum = Math.round({{$avghum}})
                 document.getElementById('-js--gemiddelde').innerHTML="Gemiddelde: " + avghum + "%"
             }
+
+            //weergave gehele tabel die opgeslagen is op de database. deze wordt aangevuld door de sensor, maar in het begin zijn er willekeurige getallen in geplaatst
+            //geprobeerd een for-loop in te zetten zodat er niet zoveel datapoints aangegeven werd. Dit is niet mogelijk met de chart (CanvasJS)
 
             var chart = new CanvasJS.Chart("-js--chartContainer", {
                 animationEnabled: true,
@@ -159,6 +169,8 @@ Luchtvochtigheid
 
         }
 
+        //weergave van tips wanneer er op de balk wordt geklikt van statusWaarde. hierdoor klapt er een collapsible uit die het advies weergeeft
+
         function openTips(){
             if(timesClicked == 1){
                 document.getElementById("-js--tips").style.height = document.getElementById("-js--content").scrollHeight + 10 + "px"
@@ -173,6 +185,9 @@ Luchtvochtigheid
         }
     </script>
 
+    //navigatie gemaakt door Dishang, mogelijk nog in de Baseview worden geïmplementeerd
+    //eigen pagina met gegevens, en een grafiek
+
     <header>
         <nav class="nav">
             <a class="nav__link nav__link__notHover nav__link--img" href="/home"><figure><img class="nav__link__img" src="/img/troposLogo.png" alt="logo van Tropos"></figure></a>
@@ -185,8 +200,6 @@ Luchtvochtigheid
         </nav>    
     </header>
 
-    
-    
     
 
     <main class="humidity">

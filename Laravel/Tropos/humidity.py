@@ -1,8 +1,10 @@
 import serial
 import mysql.connector
 
-arduino = serial.Serial("/dev/ttyUSB0", baudrate=115200, timeout=.1)
 #poort rechtsonderin van pi
+arduino = serial.Serial("/dev/ttyUSB0", baudrate=115200, timeout=.1)
+
+#verbinding maken met de Database
 mydb = mysql.connector.connect(
     host="localhost",
     user="anoea",
@@ -10,6 +12,7 @@ mydb = mysql.connector.connect(
     database="TroposDB"
 )
 
+#het verwijderen en toevoegen van data in de tabel om op 72 inserts te blijven
 def verstuurDb(data):
     print(data)
     mycursor = mydb.cursor()
@@ -18,7 +21,7 @@ def verstuurDb(data):
     mydb.commit()
 
 
-
+#lees arduino uit
 while True:
     data = arduino.readline()[:-2]
     if data:
