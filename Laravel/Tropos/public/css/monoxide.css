@@ -163,6 +163,30 @@
     }
 }
 
+@media(max-height: 1370px){
+    .monoxideSection{
+        height: 55vh;
+    }
+}
+
+@media(max-height: 830px){
+    .monoxideSection{
+        height: 80vh;
+    }
+}
+
+/* @media(max-height: 740px){
+    .monoxideSection{
+        height: 95vh;
+    }
+} */
+
+@media(max-height: 570px){
+    .monoxideSection{
+        height: 130vh;
+    }
+}
+
 
 /* MONOXIDE INFORMATION PAGE */
 .monoxideInfoTitle{
@@ -289,6 +313,38 @@
         font-size: 1.6rem;
     }
 }
+
+@media(max-height: 1370px){
+    .monoxideSection--monoxideInfo{
+        height: 50vh;
+    }
+}
+
+@media(max-height: 825px){
+    .monoxideSection--monoxideInfo{
+        height: 90vh;
+    }
+}
+
+@media(max-height: 725px){
+    .monoxideSection--monoxideInfo{
+        height: 80vh;
+    }
+}
+
+@media(max-height: 670px){
+    .monoxideSection--monoxideInfo{
+        height: 110vh;
+    }
+}
+
+
+@media(max-height: 570px){
+    .monoxideSection--monoxideInfo{
+        height: 160vh;
+    }
+}
+
 
 
 

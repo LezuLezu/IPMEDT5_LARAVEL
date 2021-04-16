@@ -1,6 +1,6 @@
 @extends("baseview")
 
-@section('monoxideCSS')
+@section('css')
 <link rel="stylesheet" href="/css/monoxide.css">
 @endsection
 
