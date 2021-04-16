@@ -11,7 +11,7 @@
 
 @section('body')
 <!-- nav -->
-@include('dust.components.dustNav')
+@include('nav')
 <!-- Show pagina gemiddelde meting -->
 <main class="main">
     <article class="dustCard dustCard--show">

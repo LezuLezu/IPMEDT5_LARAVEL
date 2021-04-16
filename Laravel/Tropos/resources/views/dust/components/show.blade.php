@@ -10,7 +10,7 @@
 @endsection
 @section('body')
 <!-- nav -->
-@include('dust.components.dustNav')
+@include('nav')
     <main class="main">
         <article class="dustCard dustCard--show">
             <section class="dustCard__text">
