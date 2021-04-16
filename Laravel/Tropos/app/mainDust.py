@@ -65,9 +65,11 @@ while True:
     # print(url)
     
     
-    if(url == '/avg'):
+    if(url == '/dust'):
         infoAmount = info[1]
-    if(url == '/'):
+    if(url == '/dust/avg'):
+        infoAmount = info[1]    
+    if(url == '/dust/show'):
         infoAmount = info[1]
     print(infoAmount)
 
