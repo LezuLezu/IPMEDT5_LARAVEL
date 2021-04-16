@@ -1,6 +1,6 @@
 @extends("baseview")
 
-@section('monoxideCSS')
+@section('css')
 <link rel="stylesheet" href="/css/monoxide.css">
 @endsection
 
@@ -58,7 +58,7 @@ Koolmonoxide
 
     if( {{$carbon_monoxide}} >= 200 && {{$carbon_monoxide}} <= 400){        //WINDOWS AND DOORS OPEN 
         result.innerHTML = "Het koolmonoxide gehalte is matig. ";
-        result__explained.innerHTML = "Het gehalte is hoger dan wat het hoort te zijn. Een CO gehalte boven de 200 kan hoofdpijn, duizeligheid, misselijkheid en vermoeidheid veroozaken.";
+        result__explained.innerHTML = "Het gehalte is hoger dan wat het hoort te zijn. Een CO gehalte boven de 200 kan hoofdpijn, duizeligheid, misselijkheid en vermoeidheid veroorzaken.";
         result__solution.innerHTML = "Om het gehalte te laten dalen gaat het raam automatisch open. Je kan zelf ook nog een deur openen";
         result__hardware.innerHTML = "Het lampje brandt geel en het raam gaat automatisch open.";
         section.style.backgroundColor ="#fdee93";

@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/nav.js"></script>
     @yield('css')
-    @yield('monoxideCSS')
-    @yield('homepageCSS')
     @yield('dustFiles')
     
     <title>@yield('title')</title>
