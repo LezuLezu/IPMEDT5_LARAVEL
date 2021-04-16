@@ -43,13 +43,14 @@ Home
 
     <section class="homepageCard" onclick=dustPage()>
         <h2 class="monoxideMain__h2">Stof</h2>
-        <!-- <p class="monoxideMain__explanation">Als je denkt dat er koomonoxide binnen is doe dan de volgende dingen:</p>
-        <ul class="monoxideMain__explanation monoxideMain__explanation--ul">
-            <li>Zet ramen en deuren wijd open. Er moet zo snel mogelijk frisse lucht binnenkomen.</li>
-            <li>Waarschuw of help mensen die ook in het gebouw zijn.</li>
-            <li>Denk aan je (eigen) veiligheid. Ga niet zomaar een ruimte binnen waarin je giftige stoffen in de lucht vermoedt.
-                Blijf in zo’n geval buiten staan en bel 1-1-2.</li>
-        </ul> -->
+        <p class="monoxideMain__explanation">
+            Stof bestaat uit verschillende materialen, voornamelijk organische zoals huidschilfers, 
+            dierenharen en voedselresten maar ook uit fijnstof, bacteriën en toxines. 
+            Hierdoor heeft een hoge hoeveelheid stof invloed op je gezondheid.  
+            Wanneer je je in een stoffige ruimte bevindt of daar langere tijden doorbrengt kan 
+            dit voor astmapatiënten ervoor zorgen dat zij moeite krijgen met ademen. <br>
+            Het stof niveau wordt continue om de 30 seconden gemeten om je te helpen dat er niet te veel stof aanwezig is.  
+        </p>       
     </section>
 
     <section class="homepageCard" onclick=monoxidePage()>

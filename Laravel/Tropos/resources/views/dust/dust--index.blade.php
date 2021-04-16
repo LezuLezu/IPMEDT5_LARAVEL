@@ -11,7 +11,7 @@
 
 @section('body')
 <!-- nav -->
-@include('dust.components.dustNav')
+@include('nav')
 <main class="main u-grid-v-12">
     <!-- Huidige meting -->
     <article class="dustCard ">

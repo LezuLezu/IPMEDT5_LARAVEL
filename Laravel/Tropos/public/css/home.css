@@ -22,7 +22,7 @@
 
 .homepageCard{
     width:45vw;
-    height: 50vh;
+    min-height: 50vh;
     margin: 0 auto;
     box-shadow: 0 0.5rem 2rem black;
     position: relative;
@@ -91,6 +91,6 @@
     }
 
     .homepageCard{
-        height: 60vh !important;
+        min-height: 60vh !important;
     }
 }
