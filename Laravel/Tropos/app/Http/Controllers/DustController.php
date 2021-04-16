@@ -22,6 +22,11 @@ class DustController extends Controller
         $average = $db[0]->average;
         $hour = $db[0]->hours;
         // return $average;
+        $file = fopen('\App\LedControl.txt', 'w'); 
+        $url = $_SERVER['REQUEST_URI'];
+        $text = $url . ',' . $average . ',' . $dust->measurement;
+        fwrite($file, $text);
+        fclose($file);
         return view('dust.dust--index', [
             'dust' => $dust,
             'hour' => $hour,
@@ -35,7 +40,7 @@ class DustController extends Controller
         $file = fopen('\App\LedControl.txt', 'w'); 
         $url = $_SERVER['REQUEST_URI'];
 
-        $text = ',' .$url .  $dust->measurement;
+        $text = $url . ','  .  $dust->measurement;
         fwrite($file, $text);
         fclose($file);
         return view('dust.components.show', ['dust' => $dust]);
