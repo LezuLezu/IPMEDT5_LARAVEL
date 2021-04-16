@@ -1,0 +1,351 @@
+/* MONOXIDE MEASSURE PAGE */
+.main{
+    padding: 2rem;
+}
+.monoxideSection{
+    width: 50vw;
+    height: 80vh;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 2rem black;
+    position: relative;
+}
+
+.monoxideSection__header{
+    padding: 3rem;
+    font-size: 2.8rem;
+}
+
+.monoxideSection__result{
+    margin: 3rem;
+    font-size: 2.6rem;
+}
+
+.monoxideSection__result__advice{
+    margin: 3rem;
+    font-size: 1.8rem;
+}
+
+.monoxideSection__button{
+    font-size: 1.8rem;
+    width: 30rem;
+    height: 5rem;
+    background-color: #3C59B6;
+    border: none;
+    color: #eeeeee;
+    margin-left: 3rem;
+    margin-top: 5rem;
+    cursor: pointer;
+}
+
+.monoxideSection__button:hover{
+    background-color: #9ff2f6;
+    color: black;
+}
+
+.monoxideSection__button__img{
+    width: 3rem;
+    float: right;
+}
+
+.monoxideSection__button--refreshButton{
+    width: 3rem;
+    float: right;
+    background-color: transparent;
+    margin-top: 0rem; 
+}
+
+.monoxideSection__button--refreshButton:hover{
+    background-color:transparent;
+    color: #eeeeee;
+}
+
+ /*ALARM BUTOTN DELETE*/
+/* .monoxideSection__button--buzzer{
+    width: 20rem;
+    margin-right: 5rem;
+    float: right;
+} */
+
+@media(max-width: 1200px){
+    .monoxideSection{
+        width: 85vw;
+    }
+}
+
+@media(max-width: 1020px){
+    .monoxideSection__button--refreshButton{
+        margin: 0;
+    }
+    /*ALARM BUTOTN DELETE*/
+    /* .monoxideSection__button--buzzer{
+        width: 15rem !important;
+    }  */
+}
+
+@media(max-width: 920px){
+    .monoxideSection{
+        height: 70vh;
+    }
+}
+
+@media(max-width: 610px){
+    .monoxideSection__button{
+        height: 4rem;
+        margin-top: 2rem;
+        margin-left: 15%;
+    } 
+    .monoxideSection__header{
+        font-size: 2rem;
+    }
+    .monoxideSection__result{
+        font-size: 1.8rem;
+    }
+    /*ALARM BUTOTN DELETE*/
+    /* .monoxideSection__button--buzzer{
+        width: 20rem !important;
+        margin-right: 0rem;
+        float: none !important;
+    } */
+    .monoxideSection__button--refreshButton{
+        margin-top: 0rem;
+    }
+}
+
+@media(max-width: 550px){
+    .monoxideSection__header{
+        font-size: 2.2rem;
+    }
+    .monoxideSection__result{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 500px){
+    .monoxideSection__button{
+        margin-left: 10%;
+    } 
+}
+
+@media(max-width: 425px){
+    .monoxideSection{
+        height: 70vh;
+    }
+    .monoxideSection__button{
+        margin-left: 10%;
+        width: 25rem;
+    } 
+    .monoxideSection__button__img{
+        width: 2rem;
+    }
+    .monoxideSection__button--refreshButton{
+        margin-left: 0;
+        margin-top: -3rem;
+    }
+}
+
+@media(max-width: 375px){
+    .monoxideSection{
+        height: 80vh;
+    }
+    .monoxideSection__header{
+        font-size: 1.8rem;
+    }
+    .monoxideSection__result{
+        font-size: 1.6rem;
+    }
+    .monoxideSection__button{
+        width: 22rem;
+    } 
+    .monoxideSection__button--refreshButton{
+        margin-left: 0;
+        margin-top: -3rem;
+        margin-right: -2rem;
+    }
+}
+
+@media(max-height: 1370px){
+    .monoxideSection{
+        height: 55vh;
+    }
+}
+
+@media(max-height: 830px){
+    .monoxideSection{
+        height: 80vh;
+    }
+}
+
+/* @media(max-height: 740px){
+    .monoxideSection{
+        height: 95vh;
+    }
+} */
+
+@media(max-height: 570px){
+    .monoxideSection{
+        height: 130vh;
+    }
+}
+
+
+/* MONOXIDE INFORMATION PAGE */
+.monoxideInfoTitle{
+    text-align: center;
+    margin: 1rem 0rem 4rem 0rem;
+    font-weight: 500;
+}
+
+.monoxideSection__button--measureCO{
+    margin-left: 40%;
+    margin-bottom: 4rem;
+}
+
+.monoxideMainInfo{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.monoxideSection--monoxideInfo{
+    width:45vw;
+    height: 60vh;
+    background-color: #fff3e6;
+}
+
+.monoxideMain__h2{
+    font-weight: 400;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.monoxideMain__explanation{
+    margin: 2rem;
+    line-height: 1.5;
+}
+
+.monoxideMain__explanation--ul{
+    margin: 2rem 4rem;
+}
+
+@media(max-width: 1280px){
+    .monoxideSection__button--measureCO{
+        width: 40rem;
+        margin-left: 35%;
+    }
+    .monoxideSection--monoxideInfo{
+        height: 70vh;
+    }
+}
+
+@media(max-width: 1125px){
+    .monoxideSection--monoxideInfo{
+        height: 80vh;
+    }
+}
+
+@media(max-width: 945px){
+    .monoxideMainInfo{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 4rem;
+    }
+    .monoxideSection__button--measureCO{
+        width: 30rem;
+    }
+    .monoxideSection--monoxideInfo{
+        width: 80vw;
+        height: 55vh;
+    }
+}
+
+@media(max-width: 885px){
+    .monoxideSection--monoxideInfo{
+        height: 65vh;
+    }
+}
+
+@media(max-width: 635px){
+    .monoxideSection__button--measureCO{
+        width: 25rem;
+        margin-left: 30%;
+    }
+    .monoxideSection--monoxideInfo{
+        height: 85vh;
+    }
+}
+
+@media(max-width: 470px){
+    .monoxideInfoTitle{
+        margin: 2rem 0rem 2rem 0rem;
+        font-size: 2.6rem;
+    }
+    .monoxideMain__h2{
+        margin-top: 2.8rem;
+        font-size: 2.4rem;
+    }
+    .monoxideSection__button--measureCO{
+        margin-left: 20%;
+    }
+    .monoxideSection--monoxideInfo{
+        height: 85vh;
+    }
+    .monoxideMain__explanation{
+        font-size: 1.6rem;
+    }
+}
+
+@media(max-width: 400px){
+    .monoxideInfoTitle{
+        font-size: 2.4rem;
+    }
+    .monoxideMain__h2{
+        margin-top: 2.8rem;
+        font-size: 2rem;
+    }
+    .monoxideSection__button--measureCO{
+        margin-left: 15%;
+    }
+    .monoxideSection--monoxideInfo{
+        height: 95vh;
+    }
+    .monoxideMain__explanation{
+        font-size: 1.6rem;
+    }
+}
+
+@media(max-height: 1370px){
+    .monoxideSection--monoxideInfo{
+        height: 50vh;
+    }
+}
+
+@media(max-height: 825px){
+    .monoxideSection--monoxideInfo{
+        height: 90vh;
+    }
+}
+
+@media(max-height: 725px){
+    .monoxideSection--monoxideInfo{
+        height: 80vh;
+    }
+}
+
+@media(max-height: 670px){
+    .monoxideSection--monoxideInfo{
+        height: 110vh;
+    }
+}
+
+
+@media(max-height: 570px){
+    .monoxideSection--monoxideInfo{
+        height: 160vh;
+    }
+}
+
+
+
+
+

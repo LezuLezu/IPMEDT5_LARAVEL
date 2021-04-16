@@ -13,6 +13,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+
+            humidityTableSeeder::class,
+            airpressureTableSeeder::class,
+            heaterAirpressureTableSeeder::class,
+            windowAirpressureTableSeeder::class,
+            TemperatureTableSeeder::class,
+            CarbonMonoxideTableSeeder::class,
+            BuzzerTableSeeder::class,
+            DustTableSeeder::class,
+            CleaningWaysTableSeeder::class,
+            CleaningProductsTableSeeder::class,
+        ]);
     }
 }

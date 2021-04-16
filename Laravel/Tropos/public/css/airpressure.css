@@ -1,0 +1,86 @@
+/* header van pagina */
+.airpressure__sectionHeader {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.airpressure__header {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 200%;
+}
+
+/* sectie met alle data */
+.section__airpressure {
+    width: 50vw;
+    height: 60vh;
+    background: #FFF3E6;
+    box-shadow: 0 0.5rem 2rem black;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+@media (max-width: 56.25rem) {
+    .section__airpressure{
+        width: 80vw;
+    }
+}
+
+.section__airpressureInfo {
+    height: 70%;
+    width: 100%;
+}
+
+.section__airpressureInfoHeader {
+    width: 100%;
+    display: block;
+    font-size: 130%;
+}
+
+.section__airpressureInfoText {
+    padding-bottom: 1.5rem;
+}
+
+/* sectie voor input */
+.section__airpressureDesired {
+    height: 30%;
+    width: 100%;
+}
+
+.section__airpressureDesiredInputSection {
+    display: block;
+}
+
+.section__airpressureDesiredHeader {
+    width: 100%;
+    font-size: 120%;
+    padding-bottom: 1rem;
+}
+
+.section__airpressureDesiredInput {
+    width: 30%;
+    height: 3rem;
+}
+
+.section__airpressureDesiredButtonSection {
+    padding-top: 2rem;
+}
+
+.section__airpressureDesiredButton {
+    display: block;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    background: #3C59B6;
+    color: white;
+}
+
+/* button hover */
+.section__airpressureDesiredButton:hover {
+    background-color: #9FF2F6;
+    color: black;
+    cursor: pointer;
+}
