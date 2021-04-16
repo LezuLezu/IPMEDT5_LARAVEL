@@ -71,7 +71,7 @@ while True:
         infoAmount = info[1]    
     if(url == '/dust/show'):
         infoAmount = info[1]
-    print(infoAmount)
+    # print(infoAmount)
 
         # Led indication towards Arduino
     if(float(infoAmount) <= low_dust):

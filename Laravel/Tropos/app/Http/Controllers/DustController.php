@@ -40,7 +40,7 @@ class DustController extends Controller
         $file = fopen('\App\LedControl.txt', 'w'); 
         $url = $_SERVER['REQUEST_URI'];
 
-        $text = ',' .$url .  $dust->measurement;
+        $text = $url . ','  .  $dust->measurement;
         fwrite($file, $text);
         fclose($file);
         return view('dust.components.show', ['dust' => $dust]);
